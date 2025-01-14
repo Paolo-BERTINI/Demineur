@@ -5,7 +5,6 @@
 ##############################################################################
 
 
-
 from random import random
 
 def genere_plateau(largeur:int, hauteur:int, probabilite_mine:float, INCONNU:int)->list:
