@@ -118,12 +118,12 @@ def action_quitter(evt, root)->None:
     root.destroy()
     return
 
-def action_aide(evt)->None:
+def action_aide(evt) -> None:
     """
-    Permet d'afficher les régles du jeu.
+    Permet d'afficher les règles du jeu.
     La fonction prend en argument l'événement evt.
     C'est une procédure.
     """
-    messagebox.showinfo("Aide", \
-    "Clic gauche pour ouvrir.\nClic droit pour drapeau ou ?.")
+    messagebox.showinfo("Aide", 
+                        "Clic gauche pour ouvrir.\nClic droit pour drapeau ou \"?\".")
     return

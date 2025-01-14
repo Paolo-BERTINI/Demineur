@@ -171,7 +171,7 @@ grille.pack()
 # Le paramètre evenement est omis lors de l'appel.
 
 # On quitte le programme avec la touche "échap".
-root.bind("<Delete>", lambda event: action_quitter(event, root))
+root.bind("<Escape>", lambda event: action_quitter(event, root))
 
 # On affiche la solution pendant une seconde avec la touche "t" pour triche.
 root.bind("<Insert>", lambda event: action_afficher_solution(event, plateau_courant, grille, largeur_case, hauteur_case,
@@ -179,7 +179,7 @@ root.bind("<Insert>", lambda event: action_afficher_solution(event, plateau_cour
                                                             mine_img, inconnu_img, PERDU, perdu_img))
 
 # On obtient de l'aide avec la touche "suppr".
-root.bind("<Escape>", lambda event: action_aide(event))
+root.bind("<Delete>", lambda event: action_aide(event))
 ### QUESTION : écrire les deux instructions correspondantes :
 
 
