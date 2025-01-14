@@ -133,11 +133,13 @@ def action_clic_decouvre(clic, plateau)->None:
         return
 
     if decouvre_case(plateau_courant, x, y, INCONNU, PERDU):
-        dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, solution=True)
+        dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,
+                        QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, solution=True)
         game_over = True
         return
 
-    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
+    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,
+                    QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
     if gagne(plateau_courant, DRAPEAU, INCONNU):
         print("Félicitations, vous avez gagné !")
         game_over = True
@@ -175,7 +177,8 @@ def action_clic_drapeau_question(clic)->None:
     elif etat == QUESTION:
         plateau_courant[x][y]["etat"] = INCONNU
 
-    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
+    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,
+                    QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
     return
 
 
@@ -192,11 +195,13 @@ def action_afficher_solution(evt)->None:
     p = copy.deepcopy(plateau_courant)
     compte_mines_solution(p)
     # On dessine le plateau avec les solutions
-    dessine_plateau(p, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, True)
+    dessine_plateau(p, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,QUESTION,
+                    question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, True)
     grille.update_idletasks()
     sleep(1)
     # On dessine à nouveau le plateau courant
-    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
+    dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,
+                    QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
     return
 
 
@@ -331,7 +336,8 @@ grille.bind("<Button-3>", action_clic_drapeau_question)
 plateau_courant = genere_plateau(largeur, hauteur, probabilite_mine, INCONNU)
 
 # On dessine le plateau de jeu :
-dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
+dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case,DRAPEAU,drapeau_img,
+                QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
 
 # Affiche la fenêtre et lance la boucle de gestion des événements :
 grille.mainloop()
