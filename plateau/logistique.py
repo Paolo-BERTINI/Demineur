@@ -109,12 +109,12 @@ def decouvre_case(plateau:list, x:int, y:int, INCONNU:int, PERDU:int)->bool:
     composante_connexe(plateau, x, y, INCONNU)
     return False
 
-def compte_mines_solution(plateau:list)->None:
+def compte_mines_solution(plateau: list) -> None:
     """
     Met le plateau à jour en comptant le nombre de mines partout.
     Attention, c'est une procédure.
     """
-    for i, ligne in range(plateau):
-        for j, case in range(ligne):
+    for i, ligne in enumerate(plateau):  # Utiliser enumerate pour obtenir index et élément
+        for j, case in enumerate(ligne):  # Utiliser enumerate pour les cases dans chaque ligne
             plateau[i][j]["etat"] = compte_mines_voisines(plateau, i, j)
     return
