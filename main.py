@@ -4,44 +4,6 @@
 
 ##############################################################################
 ##############################################################################
-#####                                                                    #####
-#####                       LE JEU DU DÉMINEUR                           #####
-#####                                                                    #####
-##############################################################################
-##############################################################################
-
-
-##############################################################################
-#                                                                            #
-#                         Paradygme choisie :                                #
-#                    la programmation fonctionnelle                          #
-#                                                                            #
-##############################################################################
-
-
-##############################################################################                                                                           #
-#  Vous devez lire l'intégralité du code avant de commencer à le compléter,  #
-#                ainsi que les commentaires et les explications.             #
-##############################################################################
-
-##############################################################################
-#            Le code est séparé en plusieurs parties :                       # 
-#                                                                            #
-#                   - IMPORT DE MODULES ET FONCTIONS                         #
-#                   - EXPLICATIONS                                           #
-#                   - FONCTIONS POUR LE PLATEAU DE JEU                       #
-#                   - FONCTIONS d'AFFICHAGE SUR LA GRILLE                    #
-#                   - FONCTIONS QUI RÉAGISSENT À UN ÉVÉNEMENT                #
-#                   - INITIALISATIONS                                        #
-#                   - GESTION DES ÉVÉNEMENTS                                 #
-#                   - LANCEMENT DU PROGRAMME                                 #
-#                   - AMÉLIORATIONS                                          #
-##############################################################################
-
-
-
-##############################################################################
-##############################################################################
 ###                 IMPORT DE MODULES ET FONCTIONS                         ###
 ##############################################################################
 ##############################################################################
@@ -56,27 +18,11 @@ from plateau.logistique import genere_plateau, dans_plateau, gagne, decouvre_cas
 from tkinter import *
 
 
-
 ##############################################################################
 ##############################################################################
-###                             EXPLICATIONS                               ###
+###                         INITIALISATIONS                                ###
 ##############################################################################
 ##############################################################################
-
-
-### Plateau de jeu
-### Le plateau est simplement représenté par une matrice (un tableau de
-### tableaux).
-### La case de coordonnées "(i,j)" est un dictionnaire à deux champs :
-###   - "mine" qui est un booléen et qui indique si la case contient une mine
-###   - "etat" qui indique l'état de la case :
-###        - INCONNU quand le joueur n'a pas découvert la case
-###        - un entier entre 0 et 8 qui indique le nombre de mines voisines,
-###          quand le joueur a découvert la case
-###        - DRAPEAU quand le joueur a mis un drapeau sur la case
-###        - QUESTION quand le joueur n'est pas sûr.
-###        - PERDU quand il s'agit d'une case avec une mine, sur laquelle le
-###          joueur a cliqué.
 
 ##############################################################################
 ### Les 13 états possibles sont modélisés par les entiers de -4 à 8 :        #
@@ -88,28 +34,11 @@ DRAPEAU = -3                                                                 #
 QUESTION = -4                                                                #
 ##############################################################################
 
-game_over = False
-
-
-
-
-
-
-
-
-
-
-##############################################################################
-##############################################################################
-###                         INITIALISATIONS                                ###
-##############################################################################
-##############################################################################
-
 # Des variables, modifiables par l'utilisateur
 largeur = 15                # largeur du plateau, en nombre de cases
 hauteur = 15                # hauteur du plateau, en nombre de cases
-probabilite_mine = 0.2     # probabilité qu'une case contienne une mine
-
+probabilite_mine = 0.2      # probabilité qu'une case contienne une mine
+game_over = False           # détermine si le jeu est fini ou non
 
 # La fenêtre principale se nomme "root" :
 largeur_case = 20
@@ -147,7 +76,6 @@ assert ( mine_img.width() == perdu_img.width() \
 # On récupère les dimensions communes à toutes les images :
 largeur_case = mine_img.width()
 hauteur_case = mine_img.height()
-
 
 # "grille" est un objet de type "Canvas" pour pouvoir dessiner dedans 
 # "grille" appartient à la fenêtre "root".
@@ -220,31 +148,3 @@ dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case,DRAPEAU,drap
 
 # Affiche la fenêtre et lance la boucle de gestion des événements :
 grille.mainloop()
-
-
-##############################################################################
-##############################################################################
-###                             AMÉLIORATIONS                              ###
-##############################################################################
-##############################################################################
-
-###  Montrer la solution lorsque la partie est perdue.
-
-###  Proposer au joueur de choisir les dimensions de la grille.
-
-###  Utiliser l'image mauvais_drapeau_img dans la fonction dessine_case en mode
-###  solution lorsqu'un drapeau était mal placé.
-
-###  Faire en sorte que la première case cliquée ne soit jamais une mine.
-
-###  Ajouter un compteur de drapeaux.
-
-###  Ajouter un compteur de mines.
-
-###  Ajouter un chronomètre.
-
-###  Mémoriser les meilleurs scores dans un fichier.
-
-
-
-###############################    FIN    ####################################
