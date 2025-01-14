@@ -119,7 +119,7 @@ def action_clic_decouvre(clic, plateau)->None:
     global game_over
     
     if game_over == True:
-        return None
+        return
     
     # clic.x et clic.y contiennent les coordonnées, en pixels,
     # de la souris au moment du clic (à l'intérieur de la fenêtre)
@@ -127,21 +127,21 @@ def action_clic_decouvre(clic, plateau)->None:
     y = clic.y // (hauteur_case+1)  # coordonnées de la case
 
     if not dans_plateau(plateau_courant, x, y):
-        return None
+        return
 
     if plateau_courant[x][y]["etat"] != INCONNU:
-        return None
+        return
 
     if decouvre_case(plateau_courant, x, y, INCONNU, PERDU):
         dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, solution=True)
         game_over = True
-        return None
+        return
 
     dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
     if gagne(plateau_courant, DRAPEAU, INCONNU):
         print("Félicitations, vous avez gagné !")
         game_over = True
-    return None
+    return
 
 
 
@@ -158,13 +158,13 @@ def action_clic_drapeau_question(clic)->None:
     """
     global game_over
     if game_over == True:
-        return None
+        return
     
     x = clic.x // (largeur_case+1)  # x et y contiennent les
     y = clic.y // (hauteur_case+1)  # coordonnées de la case
 
     if not dans_plateau(plateau_courant, x, y):
-        return None
+        return
 
     etat = plateau_courant[x][y]["etat"]
 
@@ -176,7 +176,7 @@ def action_clic_drapeau_question(clic)->None:
         plateau_courant[x][y]["etat"] = INCONNU
 
     dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
-    return None
+    return
 
 
 
@@ -197,7 +197,7 @@ def action_afficher_solution(evt)->None:
     sleep(1)
     # On dessine à nouveau le plateau courant
     dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
-    return None
+    return
 
 
 def action_quitter(evt)->None:
@@ -207,7 +207,7 @@ def action_quitter(evt)->None:
     C'est une procédure.
     """
     root.destroy()
-    return None
+    return
 
 
 def action_aide(evt)->None:
@@ -218,7 +218,7 @@ def action_aide(evt)->None:
     """
     messagebox.showinfo("Aide", \
     "Clic gauche pour ouvrir.\nClic droit pour drapeau ou ?.")
-    return None
+    return
 
 
 
