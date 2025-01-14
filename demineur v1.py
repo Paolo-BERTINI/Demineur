@@ -455,12 +455,12 @@ Label(text="Saisir 'a' pour obtenir de l'aide.").pack()
 Label(text="Saisir 'q' pour quitter le jeu.").pack()
 
 # Les images utilisées pour les cases spéciales
-inconnu_img = PhotoImage(file="inconnu.gif")
-question_img = PhotoImage(file="question.gif")
-mine_img = PhotoImage(file="mine.gif")
-drapeau_img = PhotoImage(file="drapeau.gif")
-mauvais_drapeau_img = PhotoImage(file="mauvais_drapeau.gif")
-perdu_img = PhotoImage(file="perdu.gif")
+inconnu_img = PhotoImage(file="images/inconnu.gif")
+question_img = PhotoImage(file="images/question.gif")
+mine_img = PhotoImage(file="images/mine.gif")
+drapeau_img = PhotoImage(file="images/drapeau.gif")
+mauvais_drapeau_img = PhotoImage(file="images/mauvais_drapeau.gif")
+perdu_img = PhotoImage(file="images/perdu.gif")
 
 # On vérifie que toutes les images ont les mêmes dimensions
 assert ( mine_img.height() == perdu_img.height() \
