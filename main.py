@@ -87,41 +87,7 @@ QUESTION = -4                                                                #
 
 game_over = False
 
-##############################################################################
-##############################################################################
-###                     FONCTIONS POUR LE PLATEAU DE JEU                   ###
-##############################################################################
-##############################################################################
 
-### QUESTION : compléter le code de la fonction suivante
-
-
-
-### QUESTION : compléter le code de la fonction suivante
-
-### QUESTION : compléter le code de la fonction suivante
-
-### QUESTION : compléter le code de la fonction suivante
-
-
-### QUESTION : compléter la procédure récursive suivante
-  
-
-##############################################################################
-
-### QUESTION : compléter le code de la fonction suivante
-
-
-### QUESTION : compléter le code de la fonction suivante
-
-    
-
-##############################################################################
-
-### QUESTION : compléter le code de la fonction suivante
-
-
-### QUESTION : compléter le code de la fonction suivante
 
 
 ##############################################################################
