@@ -38,7 +38,7 @@ QUESTION = -4                                                                #
 # Des variables, modifiables par l'utilisateur
 largeur = 15                # largeur du plateau, en nombre de cases
 hauteur = 15                # hauteur du plateau, en nombre de cases
-probabilite_mine = 0.2      # probabilité qu'une case contienne une mine
+probabilite_mine = 0.16     # probabilité qu'une case contienne une mine
 game_over = False           # détermine si le jeu est fini ou non
 
 # La fenêtre principale se nomme "root" :
