@@ -24,15 +24,7 @@ def gestion_events(root, plateau_courant, grille, largeur_case, hauteur_case, DR
 
     # On obtient de l'aide avec la touche "suppr".
     root.bind("<Delete>", lambda event: action_aide(event))
-    ### QUESTION : écrire les deux instructions correspondantes :
-
-
-    # Pour la souris, quelques événements possibles (il en existe d'autres) :
-    # <Button-1>           : Clic gauche
-    # <Button-2>           : Clic milieu 
-    # <Button-3>           : Clic droit
-    # <Double-Button-1>    : Double clic droit
-    # <Double-Button-2>    : Double clic gauche
+    
 
     # On ouvre la case avec un clic gauche
     grille.bind("<Button-1>", lambda clic: action_clic_decouvre(clic, plateau_courant, largeur_case, hauteur_case,
@@ -42,7 +34,6 @@ def gestion_events(root, plateau_courant, grille, largeur_case, hauteur_case, DR
 
 
     # On place un drapeau ou un point d'interrogation avec un clic droit
-    ### QUESTION : écrire l'instruction correspondante
     grille.bind("<Button-3>", lambda clic: action_clic_drapeau_question(clic, largeur_case, hauteur_case, plateau_courant, INCONNU,
                                                                         DRAPEAU, QUESTION, grille, drapeau_img, question_img,
                                                                         mine_img, inconnu_img, PERDU, perdu_img, game_over))
