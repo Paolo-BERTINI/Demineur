@@ -81,7 +81,7 @@ def action_clic_drapeau_question(clic, largeur_case, hauteur_case, plateau_coura
                     QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
     return
 
-# Géstion boutton échap
+# Géstion bouton échap
 def action_quitter(evt, root)->None:
     """
     Permet de quitter le jeux.
@@ -91,7 +91,7 @@ def action_quitter(evt, root)->None:
     root.destroy()
     return
 
-# Géstion boutton suppr/info
+# Géstion bouton suppr/info
 def action_aide(evt) -> None:
     """
     Permet d'afficher les règles du jeu.

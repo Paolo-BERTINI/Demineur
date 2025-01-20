@@ -5,16 +5,18 @@ Ce projet est une implémentation du jeu classique **Démineur**, codé en Pytho
 
 ## Prérequis
 - Python 3.8 ou supérieur
-- Les bibliothèques Python suivantes (installées automatiquement via `requirements.txt` si fourni) :
+- Les bibliothèques Python suivantes :
   - `tkinter` (pour l'interface graphique)
   - `os` et d'autres modules standards.
 
 ## Utilisation
 Au lancement, une interface graphique apparaîtra pour vous permettre de jouer.
 
-### Commandes principales
+### Commandes disponibles
 - Cliquez sur une case pour dévoiler son contenu.
 - Marquez une case suspectée de contenir une mine en effectuant un clic droit.
+- Appuyez sur le bouton **échap** pour quitter le jeu et fermer la fenêtre de jeu.
+- Appuyez sur le bouton **SUPPR** pour avoir des informations sur le jeu de jeu.
 
 ## Structure du projet
 
