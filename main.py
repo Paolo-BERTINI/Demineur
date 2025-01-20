@@ -36,8 +36,8 @@ QUESTION = -4                                                                #
 ##############################################################################
 
 # Des variables, modifiables par l'utilisateur
-largeur = 15                # largeur du plateau, en nombre de cases
-hauteur = 15                # hauteur du plateau, en nombre de cases
+largeur = 10                # largeur du plateau, en nombre de cases
+hauteur = 10                # hauteur du plateau, en nombre de cases
 probabilite_mine = 0.16     # probabilité qu'une case contienne une mine
 game_over = False           # détermine si le jeu est fini ou non
 
@@ -48,8 +48,8 @@ root = Tk()
 root.title("DÉMINEUR")
 root.resizable(width=False, height=False)
 root.geometry(f"{largeur * (largeur_case + 1) + 1}x{hauteur * (hauteur_case + 1) + 1}")
-Label(text="Saisir 'a' pour obtenir de l'aide.").pack()
-Label(text="Saisir 'q' pour quitter le jeu.").pack()
+Label(text="Saisir 'suppr' pour avoir les infos de comment jouer.").pack()
+Label(text="Saisir 'échap' pour quitter le jeu.").pack()
 
 # Les images utilisées pour les cases spéciales
 inconnu_img = PhotoImage(file="images/inconnu.gif")

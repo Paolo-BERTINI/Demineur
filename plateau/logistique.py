@@ -13,9 +13,9 @@ def genere_plateau(largeur:int, hauteur:int, probabilite_mine:float, INCONNU:int
     Chaque case contenant une mine avec la probabilité donnée en argument
     """
     plateau = []
-    for i in range(hauteur):
+    for _ in range(hauteur):
         ligne = []
-        for j in range(largeur):
+        for _ in range(largeur):
             mine_present = random() < probabilite_mine
             case = {"mine": mine_present, "etat": INCONNU}
             ligne.append(case)
