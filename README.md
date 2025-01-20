@@ -10,7 +10,7 @@ Ce projet est une implémentation du jeu classique **Démineur**, codé en Pytho
   - `os` et d'autres modules standards.
 
 ## Utilisation
-Lancez le programme en suivant les instructions ci-dessus. Une interface graphique apparaîtra pour vous permettre de jouer.
+Au lancement, une interface graphique apparaîtra pour vous permettre de jouer.
 
 ### Commandes principales
 - Cliquez sur une case pour dévoiler son contenu.
