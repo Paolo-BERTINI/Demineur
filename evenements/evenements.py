@@ -79,6 +79,10 @@ def action_clic_drapeau_question(clic, largeur_case, hauteur_case, plateau_coura
 
     dessine_plateau(plateau_courant, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img,
                     QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img)
+    
+    if gagne(plateau_courant, DRAPEAU, INCONNU):
+        print("Félicitations, vous avez gagné !")
+        game_over = True
     return
 
 # Géstion bouton échap
