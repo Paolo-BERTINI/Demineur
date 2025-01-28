@@ -51,7 +51,7 @@ def dessine_case(plateau:list, x:int, y:int, grille, largeur_case, hauteur_case,
         grille.create_image(x1, y1, image=perdu_img, anchor=NW)
     else:
         assert False , "On ne passera jamais par là !"
-    return None
+    return
 
 
 def dessine_plateau(plateau:list, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, solution=False)->None:
@@ -66,4 +66,4 @@ def dessine_plateau(plateau:list, grille, largeur_case, hauteur_case, DRAPEAU, d
     for x in range(len(plateau)):
         for y in range(len(plateau[0])):
             dessine_case(plateau, x, y, grille, largeur_case, hauteur_case, DRAPEAU, drapeau_img, QUESTION, question_img, INCONNU, mine_img, inconnu_img, PERDU, perdu_img, solution)
-    return None
+    return
