@@ -89,8 +89,6 @@ def gagne(plateau: list, DRAPEAU:int, INCONNU:int) -> bool:
         for j in range(len(plateau[i])):
             if plateau[i][j]["mine"] and plateau[i][j]["etat"] != DRAPEAU:
                 return False
-            if not plateau[i][j]["mine"] and plateau[i][j]["etat"] == INCONNU:
-                return False
     return True
 
 def decouvre_case(plateau:list, x:int, y:int, INCONNU:int, PERDU:int)->bool:
